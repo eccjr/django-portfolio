@@ -1,0 +1,347 @@
+{% load static %}
+{% load cropping %}
+{% load cookielaw_tags %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--Head Configuration-->
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}"/> <!--Site icon-->
+        <!-- My  css file -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.css' %}">
+        <!---->
+        <title>Página de Portfólio em Django | ECCjr</title>
+        <!--Reserved space for the favicon tag-->
+    </head>
+
+    <!--Body-->
+    <body id="page-top">
+        {% cookielaw_banner %}
+        <!--Navbar-->
+        <nav  id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <!--Container to retract the content-->
+            <!--<a href="#" class="navbar navbar-brand"><i class="fas fa-fist-raised p-0"></i></a>-->
+            <section class="container">
+                <!--Logo-->
+                <a class="navbar navbar-brand my-2 my-lg-0" href="/">
+                    <img src="{% static 'assets/logos/logo.png' %}">
+                </a><!--/.Logo-->
+                
+                <!--Toggle Button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Alternates navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                  
+                <!--Nav collapse (All nav itens)-->
+                <div class="collapse navbar-collapse" id="nav-main">
+                    <ul class="navbar-nav mr-auto p-2 p-content text-uppercase" id="nav-list"> <!--Index container list (Go to)--> <!--p-content-->
+                        <li class="nav-item"><a class="nav-link top-link" href="#about">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link top-link" href="#depoimentos">Depoimentos</a></li>
+                        <li class="nav-item"><a class="nav-link top-link" href="#video-packs">Loja</a></li>
+                        <li class="nav-item"><a class="nav-link top-link" href="#gallery">Galeria</a></li>
+                        <li class="nav-item"><a class="nav-link top-link" href="#page-footer">Contato</a></li>
+                    </ul><!--/.Menu-->
+
+                    <!--Social media icons-->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="https://www.instagram.com/eccjrunesp/"  class="nav-link top-link"><img class="p-0" src="{% static 'icons/instagram_1.svg' %}" width="50px" height="38px"></a></li>
+                        <li class="nav-item"><a href="https://www.facebook.com/eccjrunesp"  class="nav-link top-link"><img class="p-0" src="{% static 'icons/facebook_2.svg' %}" width="50px" height="38px"></a></li>
+                        <li class="nav-item"><a href="https://www.youtube.com"  class="nav-link top-link"><img class="p-0" src="{% static 'icons/youtube_1.svg' %}" width="50px" height="38px"></i></a></li>
+                    </ul><!--/.Icons-->
+                </div>
+            </section>
+            
+        </nav><!--Navbar/End-->
+
+
+        <!-- django mensagens  -->
+        {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {{ message }}
+          </div>
+        {% endfor %}
+
+
+
+        <div class="bar container-fluid"></div> <!--/.Bar-->
+
+        <!--About/Zenithy-->
+        <section id="about-zenithy" class="container-fluid abz pb-5">
+            <div id="photo-info" class="container">
+                <!--2 Columns-->
+                <div class="row">
+                    <!--Photo-->
+                    <div class="col-xl-6 col-12">
+                        <div class="row mt-0">
+                            <div class="col-12">
+                                <p class="text-center">
+                                    <header class="text-center" id="apresentacao">
+                                        <!-- <h1 class="text-center title-content-gold rzi"><b>Mestre&nbsp;Rynnu Zenithy</b></h1>
+                                        <hr class="my-1 hr-block-small mb-4"> -->
+                                        <br>
+                                    </header>    
+                                </p>
+                            </div><!--/.Col-->
+                        </div><!--/.Row-->
+                        <!--Photo Row-->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-center"><img src="{% static 'assets/photos/logotipo.png' %}" width="100%"></div>
+                            </div>
+                        </div><!--/.Photo Row-->
+                    </div>
+                    <!--Text-->
+                    <div class="col-xl-6 col-12 mt-4">
+
+                        <header id="about-zenithy-header">
+                            <p class="text-justify p-content-gold" style="font-size: 25px">
+                                <b>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </b>
+                                <br/>
+                                <br/>
+                            </p><!--/.Text-->
+                        </header>
+                    </div><!--/.Col Apresentação-->
+                </div>
+            </div>
+        </section>
+        
+        <!--Advantages-container-->
+        <section id="about" class="container-fluid second-color">
+            <br/>
+            <!-- 4:3 aspect ratio -->
+            <div class="row justify-content-center">
+                <br/>
+                <p> <div class="embed-responsive embed-responsive-4by3" style="width: 40%"><p class="text-center"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/w9QjPGO_bak"></iframe></p></div></p>
+            </div>
+            <br>
+            <!--4 Columns-->
+            <div class="row justify-content-md-center p-content"> <!--P Content-->
+                <div id="advantage-card" class="col-lg-3 col-12 p-4 my-3">
+                    <h3 class="text-center title-content-green text-uppercase"><b>Lorem</b></h3>
+                    <hr class="my-1 hr-block-small-white">
+                    <p class="text-center p-content-gold">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    </p>
+                </div><!--/.Col (Card)-->
+
+                <div id="advantage-card" class="col-lg-3 col-12 p-4 my-3">
+                    <h3 class="text-center title-content-green text-uppercase"><b>Ipsum</b></h3>
+                    <hr class="my-1 hr-block-small-white">
+                    <p class="text-center p-content-gold">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div><!--/.Col (Card)-->
+
+                <div id="advantage-card" class="col-lg-3 col-12 p-4 my-3">
+                    <h3 class="text-center title-content-green text-uppercase"><b>Dolor</b></h3>
+                    <hr class="my-1 hr-block-small-white">
+                    <p class="text-center p-content-gold">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                </div><!--/.Col (Card)-->
+            </div><!--/.Row-->
+        </section><!--/.Advantages-->
+  
+        <div class="bar container-fluid"></div> <!--Bar-->
+
+
+
+        <!-- Seção depoimentos -->
+        <section id="depoimentos" class="main-color">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 mt-3">
+                        <header class="text-center">
+                            <h2 class="title-content-green text-uppercase"><b>Depoimentos</b></h2>
+                            <hr class="my-1 hr-block-small mb-4">
+                        </header>
+                    </div>
+                </div>
+
+                <div class="col-md-10 offset-md-1">
+                    <div class="row">
+
+                        {% for review in reviews %}
+                        <div class="col-md-6 col-lg-4 col-12">
+                            <article class="depoimento-card my-1 fourth-color">
+                                <img src="{% cropped_thumbnail review "cropped" max_size="150x150" %}" alt="{{ review.alt }}" class="img-fluid rounded-circle mb-3">
+                                <h5 class="p-content-red titulo-depoimento"><b>{{ review.nome }}</b></h5>
+                                <h6 class="p-content-red text-center">{{ review.profissao }}</h6>
+                                <p class="p-content-black text-justify">{{ review.depoimento }}</p>
+                            </article>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Video Packs (Class)-->
+        <section id="video-packs" class="container-fluid main-color">
+            <div class="row">
+                <div class="col-md-12 mt-3">
+                    <header class="text-center">
+                        <h2 class="title-content-green text-uppercase"><b>Loja Virtual</b></h2>
+                        <hr class="my-1 hr-block-small mb-4">
+                    </header>
+                </div>
+            </div>
+
+            <div class="col-md-10 offset-md-1">
+                <div class="row">
+                    {% for product in products %}
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="card mb-4 fourth-color">
+                            <img class="card-img-top" src="{% cropped_thumbnail product "cropped" max_size="286x180" %}" alt="class-image">
+                            <div class="card-body">
+                                <div class="card-title p-content-black">
+                                    <h3 class="text-center title-content-red"><b>{{ product.nome }}</b></h3>
+                                    <p class="text-justify">{{ product.detalhes_da_pagina_inicial }}</p>
+                                    <p class="card-text text-center">
+                                        {% ifequal product.video_em_gravacao True %}
+                                            <button class="btn btn-danger" aria-disabled="true" disabled><a class="">Vídeo em gravação</a></button>
+                                        {% else %}
+                                            <a href="produto/{{ product.slug }}" class="btn btn-danger">Quero conhecer</a>
+                                        {% endifequal %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div> <!--/.Card-->  
+                    </div><!--/.Class cards row-->
+                    {% endfor %}
+
+                </div><!--/.row-->
+            </div>
+        </section><!--/. Section (Class)-->
+
+        <div class="bar container-fluid"></div> <!--/.Bar-->
+
+        <!--Galeria-->
+        <section id="gallery" class="container-fluid second-color">
+            <br/>
+            <div class="">
+                <h2 class="title-content-green text-center text-uppercase"><b>Galeria</b></h2>
+                <hr class="my-1 hr-block-small mb-4">
+            </div><!--/.Title-->
+
+            <!--Carousel Wrapper-->
+            <div id="multi-item" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top text-center mt-3 mb-3">
+                    <a class="black-text" href="#multi-item" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span></a>
+                    <a class="black-text" href="#multi-item" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+                </div><!--/.Controls-->
+            
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                    <!--Slide-->
+                    {% for img in images %}
+                        {% if forloop.first == False %}
+                            {% if forloop.counter0|divisibleby:4 %}
+                    </div>
+                    <div class="carousel-item">
+                            {% endif %}
+                        {% endif %}
+                        <div class="col-md-3 mb-3">
+                            <img class="img-fluid" src="{% cropped_thumbnail img "cropped" max_size="350x300" %}" alt="{{ img.alt }}">
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+                <!--/.Slides-->
+            </div>
+            <!--/.Carousel Wrapper-->
+            <br/>
+            <br/>
+
+        </section><!--/.Gallery-->
+
+        <!--Footer-->
+        <div class="bar container-fluid"></div> <!--Bar-->
+        <section id="page-footer" class="footer container-fluid third-color">
+            <footer class="container">
+                <!--Footer Row-->
+                <div class="row">
+                    <!--Footer Column 1 (Social Media/ Adress) [Margin bottom 3, Margin bottom lg 0, Padding top 4, Text right (Align)-->
+                    <div id="footer-right-container" class="col-lg-6 mb-3 mb-lg-0 pt-3 text-left">
+                        <div id="social-media-container">
+                            <h5 class="mb-1 text-uppercase"><b>Siga-nos</b></h5>
+                            <p class="pt-2 p-content">
+                                <a href="https://www.instagram.com/eccjrunesp/" target="_blank"><img src="{% static 'icons/instagram_1.svg' %}" width="30px" height="28px" target="_blank"> @eccjrunesp &nbsp;</a> <br/>                                <a href="https://www.facebook.com/eccjrunesp" target="_blank"><img src="{% static 'icons/facebook_2.svg' %}" width="30px" height="28px"> eccjrunesp &nbsp;</a> <br/>
+                                <a href="https://www.youtube.com" target="_blank"><img src="{% static 'icons/youtube_1.svg' %}" width="30px" height="28px"> ECCjr &nbsp;</a> <br/>
+                                <a href="mailto:contato@eccjr.com.br" target="_blank"><img src="{% static 'icons/email_1.svg' %}" width="30px" height="28px"> contato@eccjr.com.br</a> <br/>
+                                <a href="https://web.whatsapp.com" target="_blank"><img src="{% static 'icons/zap_1.svg' %}" width="30px" height="28px">  WhatsApp &nbsp;</a><br/>
+                                <img src="{% static 'icons/pin_1.svg' %}" width="30px" height="28px"> São José do Rio Preto, SP - Brasil<br/>                                
+                            </p>
+                        </div><!--/.Media-->
+                    </div><!--/.Footer Col 1-->
+
+                    <hr class="clearfix w-100 d-md-none pb-3 m-0 p-0"> <!--Study this tag better-->
+
+                    <!--Footer Column 2 (Send)-->
+                    <div class="col-lg-6 mb-3 mb-lg-0 pt-3 p-content">
+                        <h5 class="text-uppercase mb-3 text-center">Fale Conosco</h5>
+                        <form action="" class="container-fluid  text-right" id="contact-form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-6">
+                                            <input type="text" class="form-control" id="name-input" aria-describedby="Name" placeholder="Seu nome">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="email" class="form-control" id="email-input" aria-describedby="Name" placeholder="Seu Email">
+                                    </div>
+                                </div>                                
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control mb-2" id="exampleFormControlTextarea1" rows="2" placeholder="Mensagem" style="resize: none"></textarea>
+        
+                                <!-- Botão para acionar modal -->
+                                <p class="text-center">
+                                    <input type="submit" value="Enviar" style="width: 100%" class="btn btn-danger px-5" data-toggle="modal" data-target="#modalExemplo"></input>
+                                </p>
+                            </div>
+                        </form>
+                    </div><!--/.Footer Col 2-->
+    
+                </div><!--/.Row-->
+            </footer><!--/.Top Footer-->
+        </section><!--/.Section(Footer)-->
+
+        <!--Copyright Bar-->
+        <div id="contact" class="footer-copyright text-center container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <p class="p-content m-0 p-0" style="color: white">Feito com &hearts; pela ECCjr &copy; 2019</p>
+                </div>
+            </div>  
+        </div><!--/.CopyBar--> 
+ 
+        <!--Top Button-->
+        <input type="button" class="to-top"value="&blacktriangle;"></input>
+        <!--Top Button-->
+
+        <script src="{% static 'cookielaw/js/cookielaw.js' %}"></script>
+        <script src="{% static 'bootstrap-4.3.1/js/scrollbutton.js' %}"></script>
+        <script src="{% static 'bootstrap-4.3.1/js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'bootstrap-4.3.1/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

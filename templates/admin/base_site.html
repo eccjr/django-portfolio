@@ -1,0 +1,16 @@
+
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+{% load static %}
+<img src="{% static 'assets/logos/logo.png' %}" width=200px alt="logo_eccjr">
+{% endblock %}
+
+{% block extrastyle %}
+{% load static %}
+<link href="{% static 'css/adminextra.css' %}" rel="stylesheet" type="text/css" media="screen,projection" />
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

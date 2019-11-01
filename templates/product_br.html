@@ -1,0 +1,145 @@
+{% load static %}
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--Head Configuration-->
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}"/> <!--Site icon-->
+        <!-- My  css file -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'bootstrap-4.3.1/css/bootstrap.css' %}">
+        <!---->
+<title>{{ product.nome }} | ECCjr</title>
+        <!--Reserved space for the favicon tag-->
+    </head>
+
+    <!--Body-->
+    <body id="page-top">
+        
+                <!--Navbar-->
+                <nav  id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+                    <!--Container to retract the content-->
+                    <!--<a href="#" class="navbar navbar-brand"><i class="fas fa-fist-raised p-0"></i></a>-->
+                    <section class="container">
+                        <!--Logo-->
+                        <a class="navbar navbar-brand my-2 my-lg-0" href="/">
+                            <img src="{% static 'assets/logos/logo.png' %}">
+                        </a><!--/.Logo-->
+                        
+                        <!--Toggle Button-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-controls="nav-main" aria-expanded="false" aria-label="Alternates navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                            <!--Social media icons-->
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"><a href="https://www.instagram.com/eccjrunesp/"  class="nav-link top-link"><img class="p-0" src="{% static 'icons/instagram_1.svg' %}" width="50px" height="38px"></a></li>
+                                <li class="nav-item"><a href="https://www.facebook.com/eccjrunesp"  class="nav-link top-link"><img class="p-0" src="{% static 'icons/facebook_2.svg' %}" width="50px" height="38px"></a></li>
+                                <li class="nav-item"><a href="https://www.youtube.com"  class="nav-link top-link"><img class="p-0" src="{% static 'icons/youtube_1.svg' %}" width="50px" height="38px"></i></a></li>
+                            </ul><!--/.Icons-->
+                        </div>
+                    </section>
+                    
+                </nav><!--Navbar/End-->
+
+        <div class="bar container-fluid"></div> <!--/.Bar-->
+
+        <!--Product-->
+        <section class="fourth-color" id="product">
+            <br/>
+            <div class="container">
+                <header class="text-center" id="course-header">
+                        <h2 class="title-content-green"><b>{{ product.nome }}</b></h2>
+                        <h4 class="title-content-green">{{ product.detalhes_da_pagina_inicial}}</h4>
+                        <hr class="hr-block-small">
+                    </header><!--/.Course Intro-->
+        
+                <!--Video iframe-->
+                <div class="responsive-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        {% video product.link_video_demo as my_video %}
+                            URL: {{ my_video.url }}
+                            Thumbnail: {{ my_video.thumbnail }}
+                            Backend: {{ my_video.backend }}
+                        
+                            {% video my_video "large" %}
+                        {% endvideo %}
+                    </div>
+                </div>
+                <!--/.Video-->
+
+
+                <br/>
+
+                <div class="row justify-content-center" id="class-description">
+                    <div class="col-lg-6 col-12" id="text">
+                        <header class="text-center" id="course-header">
+                            <h3 class="text-center title-content-green text-uppercase"><b>Descrição</b></h3>
+                            <hr class="hr-block-small">
+                        </header><!--/.Course Intro-->
+                        <article class="text-justify" id="class-description">
+                            {{ product.detalhes }}
+                        </article>
+                        <br/>
+                        <div class="container">
+                            <div class="text-center">
+                                <header class="text-center" id="course-header">
+                                    <h3 class="text-center title-content-green text-uppercase"><b>Interessado?</b></h3>
+                                    <hr class="hr-block-small">
+                                </header><!--/.Course Intro-->
+                                <input type="submit" value="Quero Acessar o Curso" class="title-content btn btn-dark" style="height: 60px;" onclick="window.location.href='{{ product.link_botao_de_compra }}'"></input><!--/.Submit Button-->
+                            </div>
+                        </div>
+                        <br>
+                    </div><!--/.Unique Col-->
+                </div><!--/.Row(Description)-->
+            </div><!--/.Container-->
+        </section><!--/.Product-->
+
+        <!--Footer-->
+        <div class="bar container-fluid"></div> <!--Bar-->
+        <section id="page-footer" class="footer container-fluid third-color">
+            <footer class="container">
+                <!--Footer Row-->
+                <div class="row">
+                    <!--Footer Column 1 (Social Media/ Adress) [Margin bottom 3, Margin bottom lg 0, Padding top 4, Text right (Align)-->
+                    <div id="footer-right-container" class="col-lg-6 mb-3 mb-lg-0 pt-3 text-left">
+                        <div id="social-media-container">
+                            <h5 class="mb-1 text-uppercase"><b>Siga-nos</b></h5>
+                            <p class="pt-2 p-content">
+                                <a href="https://www.instagram.com/eccjrunesp/" target="_blank"><img src="{% static 'icons/instagram_1.svg' %}" width="30px" height="28px" target="_blank"> @eccjrunesp &nbsp;</a> <br/>                                <a href="https://www.facebook.com/eccjrunesp" target="_blank"><img src="{% static 'icons/facebook_2.svg' %}" width="30px" height="28px"> eccjrunesp &nbsp;</a> <br/>
+                                <a href="https://www.youtube.com" target="_blank"><img src="{% static 'icons/youtube_1.svg' %}" width="30px" height="28px"> ECCjr &nbsp;</a> <br/>
+                                <a href="mailto:contato@eccjr.com.br" target="_blank"><img src="{% static 'icons/email_1.svg' %}" width="30px" height="28px"> contato@eccjr.com.br</a> <br/>
+                                <a href="https://web.whatsapp.com" target="_blank"><img src="{% static 'icons/zap_1.svg' %}" width="30px" height="28px">  WhatsApp &nbsp;</a><br/>
+                                <img src="{% static 'icons/pin_1.svg' %}" width="30px" height="28px"> São José do Rio Preto, SP - Brasil<br/>                                
+                            </p>
+                        </div><!--/.Media-->
+                    </div><!--/.Footer Col 1-->
+
+                    <hr class="clearfix w-100 d-md-none pb-3 m-0 p-0"> <!--Study this tag better-->
+
+    
+                </div><!--/.Row-->
+            </footer><!--/.Top Footer-->
+        </section><!--/.Section(Footer)-->
+
+        <!--Copyright Bar-->
+        <div id="contact" class="footer-copyright text-center container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <p class="p-content m-0 p-0" style="color: white">Feito com &hearts; pela ECCjr &copy; 2019</p>
+                </div>
+            </div>  
+        </div><!--/.CopyBar--> 
+
+        <a href="#page-top" id="go-to-top">▲</a>
+ 
+        <!--Script Tags-->
+        <script src="{% static 'bootstrap-4.3.1/js/jquery-3.4.1.min.js' %}"></script>
+        <script src="{% static 'bootstrap-4.3.1/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

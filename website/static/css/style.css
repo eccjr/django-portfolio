@@ -1,0 +1,225 @@
+/* Imported fonts */
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap'); /*font-family: 'Anton', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Blinker&display=swap'); /*font-family: 'Blinker', sans-serif;*/
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap'); /*font-family: 'Oswald', sans-serif;*/
+
+/*Initial Configuration*/
+* {
+    scroll-behavior: smooth;
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    width: 100%
+}
+
+/*Text formatting classes*/
+.title-content  {
+    color: black;
+}
+.title-content-white  {
+    color: white;
+}
+.title-content-green {
+    color: #068f25;
+}
+.p-content {
+    font-family: 'Blinker', sans-serif;
+    color: white;
+}
+
+.p-content-black {
+    font-family: 'Blinker', sans-serif;
+    color: black;
+}
+
+/*.Text*/
+
+/*Hr blocks*/
+.hr-block-small {
+    border-bottom: 1px solid #006938;
+    width: 10%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+.hr-block-small-white {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+
+.hr-block {
+    border-bottom: 1px solid rgb(172, 3, 3);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+
+.bar {
+    height: 7px;
+    background: linear-gradient(to right, #40434e,#fcfcfc);
+}
+/*.Hr blocks*/
+
+/*Colors*/
+.main-color {
+    background-color: #acacac !important;
+}
+.second-color  {
+    background: #383838 !important;
+}
+.third-color  {
+    background: #777777 !important;
+}
+.fourth-color {
+    background: #ccc !important;
+}
+
+/*.Colors*/
+
+/* Navbar */
+nav#navbar {
+    background-color: #acacac !important;
+}
+
+.top-link {
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.1s;
+    border-bottom: 1px transparent solid;
+}
+.top-link:hover {
+    border-bottom: 1px green solid;
+}
+/*.Navbar*/
+
+/*    background: linear-gradient(to right, rgb(46, 49, 53), rgb(151, 54, 54));*/
+
+/*Top Container*/
+#top-container h1 {
+    font-size: 10px;
+}
+/*.Top Container*/
+
+/*about zenithy*/
+.abz { 
+    /* The image used */
+    background: url("../assets/photos/background.png") no-repeat center/80% ;
+    /* Set a specific height */
+
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* img apresentacao */
+section.abz img {
+    box-shadow: 0 0 4px rgba(0,0,0,.8);
+}
+
+@media(min-width:1200px) {
+    #about-zenithy-header {
+        margin-top: 35%;
+    }
+}
+.rzi {
+    font-size: 30px;
+}
+/*.About*/
+
+
+/*Footer*/
+#contact {
+    background-color: rgb(34, 34, 34);
+}
+#social-media-container a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+#social-media-container a:hover {
+    color: #00a859;
+}
+#page-footer h5 {
+    color: #006938;
+}
+/*.Footer*/
+
+/*Gallery*/
+@media (min-width: 768px) {
+    .carousel-multi-item-2 .col-md-3 {
+        float: left;
+        width: 25%;
+        max-width: 100%; 
+    } 
+}
+.carousel-multi-item-2 .card img {
+    border-radius: 2px; 
+}
+/*Gallery*/
+
+/*Go top*/
+#go-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-decoration: none;
+    color: white !important;
+}
+
+/* depoimentos */
+article.depoimento-card {
+    text-align: center;
+    padding: 10px;
+    border: #40434e2f solid 0.5px;
+    border-radius: 10px;
+}
+
+article.depoimento-card h5 {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+
+
+article.depoimento-card p {
+    font-size: 16px;
+    text-indent: 15px;
+}
+
+/* index - contato */
+section#contact-form {
+    margin-top: 0px;
+}
+
+/* Button */
+
+.btn-danger {
+    background-color: #068f25 !important;
+    border-color: #068f25 !important;
+}
+
+/*For the button*/
+.to-top {
+    position: fixed; /*Keeps the button static on the screen*/
+    /*Button size and position*/
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    /*Button Style*/
+    background: rgb(0, 0, 0); /*Button background*/
+    color: rgb(255, 255, 255); /*Text Color (Arrow)*/
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+}
