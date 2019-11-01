@@ -2,7 +2,7 @@
 
 This is a portfolio page sample using Django and SQLite3. It uses image-cropping and embed YouTube/Soundcloud frame. The images are stock photos downloaded from https://www.pexels.com
 
-[]!(preview.png)
+![](preview.png)
 
 ## Follow the steps to run this project:
 
