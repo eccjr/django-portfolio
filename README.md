@@ -1,6 +1,6 @@
 # Simple portfolio page written in Python Django
 
-This is a portfolio page sample using Django and SQLite3. It uses image-cropping and embed YouTube/Soundcloud frame. The images are stock photos downloaded from https://www.pexels.com
+This is a portfolio page sample using Django and SQLite3. It uses image-cropping, embed YouTube/Soundcloud frame and implements a cookie consent bar. The images are stock photos downloaded from https://www.pexels.com
 
 ![](preview.png)
 
