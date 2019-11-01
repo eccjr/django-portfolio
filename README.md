@@ -8,6 +8,8 @@ This is a portfolio page sample using Django and SQLite3. It uses image-cropping
 
 1. Clone this repository and create a virtual-env in the same directory
 ```sh
+git clone https://github.com/eccjr/django-portfolio.git
+cd django-portfolio
 python3 -m venv venv
 ```
 
